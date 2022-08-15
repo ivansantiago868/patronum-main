@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>9c36b5ae-a59f-4b24-8a20-5aaf3142eaab</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>Gotet.Twitter.Stream</Name>
+    <RootNamespace>Gotet.Twitter.Stream</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <EnableNativeCodeDebugging>True</EnableNativeCodeDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Config\twitter_credentials.py" />
+    <Compile Include="Controller\DriveControler.py" />
+    <Compile Include="Controller\FilesController.py" />
+    <Compile Include="Controller\manage_tweet.py" />
+    <Compile Include="Controller\ShController.py" />
+    <Compile Include="Controller\SuntzuController.py" />
+    <Compile Include="dist\Config\twitter_credentials.py" />
+    <Compile Include="Entity\Publics.py" />
+    <Compile Include="Entity\StdOutListener.py" />
+    <Compile Include="StreamDirector.py" />
+    <Compile Include="StreamFile.py" />
+    <Compile Include="StreamMain.py" />
+    <Compile Include="StreamRouter.py" />
+    <Compile Include="StreamSave.py" />
+    <Compile Include="StreamSingle.py" />
+    <Compile Include="StreamTrends.py" />
+    <Compile Include="Utilities\auth.py" />
+    <Compile Include="Utilities\drive.py" />
+    <Compile Include="Utilities\FIFO.py" />
+    <Compile Include="Utilities\http_service.py" />
+    <Compile Include="Utilities\log.py" />
+    <Compile Include="Utilities\MemCached.py" />
+    <Compile Include="Utilities\mq.py" />
+    <Compile Include="Utilities\theread.py" />
+    <Compile Include="Utilities\timeScan.py" />
+    <Compile Include="Utilities\utils.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".vscode\launch.json" />
+    <Content Include=".vscode\settings.json" />
+    <Content Include="Config\config.ini" />
+    <Content Include="Config\credentials.json" />
+    <Content Include="Config\relation.json" />
+    <Content Include="Config\token.pickle" />
+    <Content Include="dist\Config\config.ini" />
+    <Content Include="dist\memcache.bat" />
+    <Content Include="dist\Run.bat" />
+    <Content Include="dist\RunSave.bat" />
+    <Content Include="FileProcess\Modelo_aliasSH.json" />
+    <Content Include="FileProcess\attitudeSH.json" />
+    <Content Include="FileProcess\attitudeWords.json" />
+    <Content Include="FileProcess\Modelo_Channel_by_stakeholder.json" />
+    <Content Include="FileProcess\driver_interes_client.json" />
+    <Content Include="FileProcess\driver_list_sh_general.json" />
+    <Content Include="FileProcess\driver_port_by_client.json" />
+    <Content Include="FileProcess\driver_sh_client.json" />
+    <Content Include="FileProcess\Modelo_interestMonibotWords.json" />
+    <Content Include="FileProcess\Modelo_port_by_client.json" />
+    <Content Include="FileProcess\Trends\TredsBrazil.json" />
+    <Content Include="FileProcess\Trends\TredsColombia.json" />
+    <Content Include="FileProcess\Trends\TredsMexico.json" />
+    <Content Include="icon\StreamDirector.ico" />
+    <Content Include="icon\StreamFile.ico" />
+    <Content Include="icon\StreamMain.ico" />
+    <Content Include="icon\StreamRouter.ico" />
+    <Content Include="icon\StreamSave.ico" />
+    <Content Include="icon\StreamSingle.ico" />
+    <Content Include="icon\StreamTrends.ico" />
+    <Content Include="README.md" />
+    <Content Include="requirements.txt" />
+    <Content Include="StreamDirector.spec" />
+    <Content Include="StreamFile.spec" />
+    <Content Include="StreamMain.spec" />
+    <Content Include="StreamRouter.spec" />
+    <Content Include="StreamSave.spec" />
+    <Content Include="StreamSingle.spec" />
+    <Content Include="StreamTrends.spec" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vscode\" />
+    <Folder Include="Config\" />
+    <Folder Include="Controller\" />
+    <Folder Include="dist\" />
+    <Folder Include="dist\Config\" />
+    <Folder Include="dist\FileProcess\" />
+    <Folder Include="Entity\" />
+    <Folder Include="FileProcess\" />
+    <Folder Include="FileProcess\Trends\" />
+    <Folder Include="icon\" />
+    <Folder Include="Utilities\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <Import Condition="Exists($(PtvsTargetsFile))" Project="$(PtvsTargetsFile)" />
+  <Import Condition="!Exists($(PtvsTargetsFile))" Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

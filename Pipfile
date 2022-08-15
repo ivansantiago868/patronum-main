@@ -1,0 +1,25 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+pyodbc = "*"
+requests = "*"
+google-api-python-client = "1.10.0"
+google-auth-oauthlib = "*"
+numpy = "*"
+tweepy = "*"
+twarc = "*"
+pyinstaller = "*"
+setuptools = "*"
+oauth2client = "*"
+pika = "*"
+pymemcache = "*"
+psutil = "*"
+datetime = "*"
+
+[requires]
+python_version = "3.6.8"
